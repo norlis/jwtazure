@@ -67,3 +67,18 @@ func main() {
 }
 
 ```
+
+### Opciones de Configuración
+> Al crear un nuevo Validator, puedes pasar las siguientes opciones:
+> 
+> `WithAudiences([]string)`: 
+> 
+> Especifica una lista de audiences válidas. Requerido a menos que se deshabilite la validación.
+>
+> `WithoutAudienceValidation()`: 
+> 
+> Deshabilita la validación del claim de audiencia. No recomendado para producción.
+>
+> `WithLogger(*zap.Logger)`: 
+> 
+> Inyecta una instancia de zap.Logger. Si no se proporciona, se crea un logger de producción por defecto.
